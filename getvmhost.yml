@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: True
   vars:
-     ansible_python_interpreter: '/bin/python'
+     ansible_python_interpreter: '/bin/python3'
      esxi_server: 'plato.internal.ames.net'
      esxi_username: 'root'
      esxi_password: ''
