@@ -7,6 +7,8 @@
        ansible_home_directory: "{{ home_directory }}"
        account_sudoers: "{{ account_sudoer }}"
        user_comment: "{{ user_comment }}"
+       public_key: "{{ public_key }}"
+       pub_key_avail: "{{ pub_key_avail }}"
 
     tasks:
     
@@ -38,3 +40,10 @@
         group: root
         mode: 'ug+rwX,o='
       when: account_sudoer == 'true'
+      
+    - name: Making sure the public key for the "{{ account }}" account is present
+      authorized_key:
+        user: "{{ account }}"
+        state: present
+        key: "{{ public_key }}"
+      when: pub_key_avail == 'true'
