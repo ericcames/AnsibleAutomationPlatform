@@ -1,8 +1,7 @@
 ---
-  - name: Read my survey variables
-    hosts: localhost
-    connection: local
-    gather_facts: no
+  - name: Create Ansible Service Account
+    hosts: all
+    gather_facts: yes
     vars:
        ansible_svc_account: "{{ ansible_svc_account }}"
        ansible_home_directory: "{{ ansible_home_directory }}"
@@ -19,3 +18,10 @@
       run_once: true
       when: 'ansible_home_directory is not defined'
      
+    - name: service account is present
+      user:
+        name: "{{ ansible_svc_account }}"
+        home: "{{ ansible_home_directory }}/{{ ansible_svc_account }}"
+        comment: Service account for Ansible
+        state: present
+        system: True
