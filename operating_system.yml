@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: What operating systems do we have?
+  hosts: all
   gather_facts: true
   tasks:
     - name: Return OS version to registered my_release variable
