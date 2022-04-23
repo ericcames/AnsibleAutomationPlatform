@@ -18,7 +18,7 @@
       run_once: true
       when: 'ansible_home_directory is not defined'
      
-    - name: Creating the "{{ ansible_svc_account }}" user account
+    - name: Creating the "{{ ansible_svc_account }}" user account and the "{{ ansible_home_directory }}/{{ ansible_svc_account }}" home directory
       user:
         name: "{{ ansible_svc_account }}"
         home: "{{ ansible_home_directory }}/{{ ansible_svc_account }}"
