@@ -30,7 +30,7 @@
         remove: false
         system: true
  
-    - name: "{{ account }}" is included in sudoers.d directory
+    - name: "{{ account }} is included in sudoers.d directory"
       copy:
         dest: "/etc/sudoers.d/{{ account }}"
         content: "{{ account }} ALL=(ALL) NOPASSWD: ALL\n"
