@@ -1,0 +1,10 @@
+---
+- name: Upgrading all Modules to Latest
+  hosts: all
+  gather_facts: True
+
+  tasks:
+    - name: Upgrading all Modules to Latest
+      yum:
+        name: '*'
+        state: latest
