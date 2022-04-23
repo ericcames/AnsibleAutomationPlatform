@@ -5,7 +5,7 @@
     gather_facts: no
     vars:
        ansible_svc_account: "{{ ansible_svc_account }}"
-       my_email_address: "{{user_name}}@redhat.com"
+       ansible_home_directory: "{{ ansible_home_directory }}"
 
     tasks:
     
@@ -14,8 +14,8 @@
       run_once: true
       when: 'ansible_svc_account is not defined'
       
-    - name: 'Preflight Varible check :: user_name'
-      fail: msg='Please include the user_name to the variable "user_name"'
+    - name: 'Preflight Varible check :: ansible_home_directory'
+      fail: msg='Please include the user_name to the variable "ansible_home_directory"'
       run_once: true
-      when: 'user_name is not defined'
+      when: 'ansible_home_directory is not defined'
      
