@@ -1,7 +1,6 @@
 ---
 - name: Gather fact ESXi host
-  hosts: localhost
-  connection: local
+  hosts: all
   gather_facts: False
   vars:
      ansible_python_interpreter: ''
