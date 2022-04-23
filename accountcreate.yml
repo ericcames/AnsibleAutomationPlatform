@@ -24,6 +24,6 @@
         home: "{{ ansible_home_directory }}/{{ ansible_svc_account }}"
         create_home: true
         comment: Service account for Ansible
-        state: present
-        remove: false
+        state: absent
+        remove: true
         system: true
