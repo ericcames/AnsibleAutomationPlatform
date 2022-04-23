@@ -1,4 +1,4 @@
 ---
-ansible_user_name: ''
+ansible_svc_account: ''
 ansible_home_dir: ''
 ansible_ssh_pub_key: ''
