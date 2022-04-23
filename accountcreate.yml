@@ -1,29 +1,40 @@
 ---
-  - name: Create Ansible Service Account
+  - name: Create Local Account
     hosts: all
     gather_facts: yes
     vars:
-       ansible_svc_account: "{{ ansible_svc_account }}"
-       ansible_home_directory: "{{ ansible_home_directory }}"
+       ansible_svc_account: "{{ account }}"
+       ansible_home_directory: "{{ home_directory }}"
+       account_sudoers: "{{ account_sudoer }}"
+       user_comment: "{{ user_comment }}"
 
     tasks:
     
-    - name: 'Preflight Varible check :: ansible_svc_account'
-      fail: msg='Please include the ansible_svc_account to the variable "ansible_svc_account"'
+    - name: 'Preflight Varible check :: account'
+      fail: msg='Please include the account to the variable "account"'
       run_once: true
-      when: 'ansible_svc_account is not defined'
+      when: 'account is not defined'
       
-    - name: 'Preflight Varible check :: ansible_home_directory'
-      fail: msg='Please include the user_name to the variable "ansible_home_directory"'
+    - name: 'Preflight Varible check :: home_directory'
+      fail: msg='Please include the home_directory to the variable "home_directory"'
       run_once: true
-      when: 'ansible_home_directory is not defined'
+      when: 'home_directory is not defined'
      
-    - name: Creating the "{{ ansible_svc_account }}" user account and the "{{ ansible_home_directory }}/{{ ansible_svc_account }}" home directory
+    - name: Creating the "{{ account }}" user account and the "{{ home_directory }}/{{ account }}" home directory
       user:
-        name: "{{ ansible_svc_account }}"
-        home: "{{ ansible_home_directory }}/{{ ansible_svc_account }}"
+        name: "{{ account }}"
+        home: "{{ home_directory }}/{{ account }}"
         create_home: true
-        comment: Service account for Ansible
-        state: absent
-        remove: true
+        comment: "{{ user_comment }}"
+        state: present
+        remove: false
         system: true
+ 
+    - name: "{{ account }}" is included in sudoers.d directory
+      copy:
+        dest: "/etc/sudoers.d/{{ account }}"
+        content: "{{ account }} ALL=(ALL) NOPASSWD: ALL\n"
+        owner: root
+        group: root
+        mode: 'ug+rwX,o='
+      when: account_sudoer == 'true'
