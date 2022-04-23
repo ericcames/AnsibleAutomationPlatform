@@ -18,10 +18,12 @@
       run_once: true
       when: 'ansible_home_directory is not defined'
      
-    - name: service account is present
+    - name: Creating the "{{ ansible_svc_account }}" user account
       user:
         name: "{{ ansible_svc_account }}"
         home: "{{ ansible_home_directory }}/{{ ansible_svc_account }}"
+        create_home: true
         comment: Service account for Ansible
         state: present
-        system: True
+        remove: false
+        system: true
