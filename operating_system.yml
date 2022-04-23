@@ -1,5 +1,4 @@
 ---
-- name: What Operating systems do we have??
 - hosts: all
   gather_facts: true
   tasks:
