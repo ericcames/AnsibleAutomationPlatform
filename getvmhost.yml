@@ -3,9 +3,9 @@
   hosts: all
   gather_facts: False
   vars:
-     ansible_python_interpreter: ''
-     esxi_server: ''
-     esxi_username: ''
+     ansible_python_interpreter: '/usr/bin/python3'
+     esxi_server: 'plato.internal.ames.net'
+     esxi_username: 'root'
      esxi_password: ''
   tasks:
    - name: Gather vmware host facts
