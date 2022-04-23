@@ -1,9 +1,9 @@
 ---
 - name: Gather fact ESXi host
   hosts: all
-  gather_facts: False
+  gather_facts: True
   vars:
-     ansible_python_interpreter: '/usr/bin/python3'
+     ansible_python_interpreter: ''
      esxi_server: 'plato.internal.ames.net'
      esxi_username: 'root'
      esxi_password: ''
