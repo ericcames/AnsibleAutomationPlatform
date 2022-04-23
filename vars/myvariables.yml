@@ -1,0 +1,4 @@
+---
+ansible_user_name: ansible
+ansible_home_dir: /home
+ansible_ssh_pub_key: 
