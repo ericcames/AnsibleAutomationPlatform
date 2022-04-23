@@ -1,3 +1,4 @@
+---
 - name: Template file that will give me sudo access with no passwd
   ansible.builtin.template:
     src: /AnsibleAutomationPlatform/files/sudoers_d/eames
