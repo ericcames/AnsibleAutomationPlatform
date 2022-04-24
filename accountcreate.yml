@@ -8,7 +8,6 @@
        account_sudoers: "{{ account_sudoer }}"
        user_comment: "{{ user_comment }}"
        public_key: "{{ public_key }}"
-       pub_key_avail: "{{ pub_key_avail }}"
 
     tasks:
     
@@ -46,4 +45,4 @@
         user: "{{ account }}"
         state: present
         key: "{{ public_key }}"
-      when: pub_key_avail == 'true'
+      when: public_key != 'false'
