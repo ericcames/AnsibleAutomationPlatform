@@ -22,5 +22,3 @@
         
     - name: Reloading sshd service 
       shell: systemctl reload sshd.service
-        become: yes
-        
