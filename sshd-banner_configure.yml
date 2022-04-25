@@ -21,7 +21,6 @@
         line: 'Banner /etc/ssh/sshd-banner'
         
     - name: Reloading sshd service 
-      command: systemctl
-        args: status sshd.service
+      shell: systemctl reload sshd.service
         become: yes
         
