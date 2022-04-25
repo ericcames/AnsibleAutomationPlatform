@@ -1,11 +1,11 @@
 ---
-  -name: Configuring the prelogin message
+  - name: Configuring the prelogin message
     hosts: all
     gather_facts: no
     
     tasks:
     
-    -name: Copy the sshd-banner file into place
+    - name: Copy the sshd-banner file into place
       copy:
         src: files_to_deploy/sshd-banner
         dest: /etc/ssh/sshd-banner
