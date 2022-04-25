@@ -15,7 +15,5 @@
     - name: Deleting the "{{ account }}" user account
       user:
         name: "{{ account }}"
-        create_home: true
         state: absent
         remove: false
-        system: true
