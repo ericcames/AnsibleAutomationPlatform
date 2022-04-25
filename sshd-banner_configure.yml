@@ -22,3 +22,11 @@
         
     - name: Reloading sshd service 
       shell: systemctl reload sshd.service
+      
+    - name: Copy the new /etc/motd into place
+      copy:
+        src: files_to_deploy/motd
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: u+rw,g-wx,o-wx
