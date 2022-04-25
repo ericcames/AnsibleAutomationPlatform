@@ -19,3 +19,9 @@
         state: present
         regexp: '^#Banner none'
         line: 'Banner /etc/ssh/sshd-banner'
+        
+    - name: Reloading sshd service 
+      command: 
+        systemctl status sshd.service
+        become: yes
+        
