@@ -1,0 +1,21 @@
+---
+  - name: Delete Local Account
+    hosts: all
+    gather_facts: yes
+    vars:
+       ansible_svc_account: "{{ account }}"
+       
+    tasks:
+    
+    - name: 'Preflight Varible check :: account'
+      fail: msg='Please include the account to the variable "account"'
+      run_once: true
+      when: 'account is not defined'
+            
+    - name: Deleting the "{{ account }}" user account
+      user:
+        name: "{{ account }}"
+        create_home: true
+        state: absent
+        remove: false
+        system: true
