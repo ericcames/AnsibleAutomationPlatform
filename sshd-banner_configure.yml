@@ -1,5 +1,5 @@
 ---
-- name: Create Local Account
+- name: Configuring the prelogin message
     hosts: all
     gather_facts: no
     
