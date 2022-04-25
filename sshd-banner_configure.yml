@@ -19,7 +19,14 @@
         state: present
         regexp: '^#Banner none'
         line: 'Banner /etc/ssh/sshd-banner'
-        
+    
+    - name: Disabling root login via ssh
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        state: present
+        regexp: '^#PermitRootLogin yes'
+        line: 'PermitRootLogin no'
+            
     - name: Reloading sshd service 
       shell: systemctl reload sshd.service
       
