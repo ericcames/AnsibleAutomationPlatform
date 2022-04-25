@@ -12,3 +12,10 @@
         owner: root
         group: root
         mode: u+rw,g-wx,o-wx
+       
+    - name: Updating the sshd_config file to show the new banner
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        state: present
+        regexp: '^#Banner none'
+        line: 'Banner /etc/ssh/sshd-banner'
