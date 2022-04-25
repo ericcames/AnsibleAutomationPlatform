@@ -16,4 +16,9 @@
       user:
         name: "{{ account }}"
         state: absent
-        remove: false
+        remove: true
+        
+    - name: "Making sure the {{ account }} user is not in the sudoers.d directory"
+      file:
+        path: "/etc/sudoers.d/{{ account }}"
+        state: absent
