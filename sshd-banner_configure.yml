@@ -1,5 +1,5 @@
 ---
-  - name: Configuring the prelogin message
+  - name: Securing the machines
     hosts: all
     gather_facts: no
     
@@ -34,6 +34,14 @@
       copy:
         src: files_to_deploy/motd
         dest: /etc/motd
+        owner: root
+        group: root
+        mode: u+rw,g-wx,o-wx
+        
+    - name: Copy the new /etc/issue into place
+      copy:
+        src: files_to_deploy/issue
+        dest: /etc/issue
         owner: root
         group: root
         mode: u+rw,g-wx,o-wx
