@@ -1,0 +1,5 @@
+---
+- name: 'Preflight Varible check :: slackcredname'
+  fail: msg='Please include the slackcredname to the variable "slackcredname"'
+  run_once: true
+  when: 'slackcredname is not defined'
