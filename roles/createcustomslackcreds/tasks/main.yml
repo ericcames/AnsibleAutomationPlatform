@@ -1,0 +1,24 @@
+---
+  - include: preflight-checks.yml
+
+  - name: Creating Custom Controller Crediental for Slack messages
+    tower_credential_type:
+      name: "{{ slackcredname }}"
+      description: Test cred type playbook creation
+      kind: cloud
+      inputs: {"fields":
+                [{
+                  "id": "slack_token",
+                  "type": "string",
+                  "label": "Slack webhook Token",
+                  "secret": true
+                }]
+              }
+      injectors: { "extra_vars":
+                   { "slack_token" : "{% raw %}{{slack_token}}{% endraw %}"}
+                 }
+
+
+      state: present
+      run_one: true
+      validate_certs: false
