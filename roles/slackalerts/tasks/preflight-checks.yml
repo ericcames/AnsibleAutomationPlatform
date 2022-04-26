@@ -1,0 +1,13 @@
+---
+- name: 'Slack Token present check slack alert variables'
+  block:
+  - name: 'Preflight Varible check :: channel'
+    fail: msg='Please include the channel to the variable "channel"'
+    run_once: true
+    when: 'channel is not defined'
+
+  - name: 'Preflight Varible check :: slackuser'
+    fail: msg='Please include the slackuser to the variable "slackuser"'
+    run_once: true
+    when: 'slackuser is not defined'
+  when: 'slack_token is defined'
