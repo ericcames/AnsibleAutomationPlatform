@@ -1,7 +1,7 @@
 ---
   - include: preflight-checks.yml
 
-  - name: Creating Custom Controller Crediental for Slack messages
+  - name: Creating Custom Controller Credential for Slack messages
     tower_credential_type:
       name: "{{ slackcredname }}"
       description: Test cred type playbook creation
