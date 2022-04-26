@@ -1,0 +1,7 @@
+---
+- name: Creating custom AAP controller cred
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: createcustomslackcreds
+      tags: ['slackcreds']
