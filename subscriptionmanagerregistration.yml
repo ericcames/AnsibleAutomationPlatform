@@ -1,5 +1,5 @@
 ---
-- Registering system with Red Hat
+- name: Registering system with Red Hat
   hosts: all
   become: yes
   gather_facts: yes
