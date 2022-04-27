@@ -1,0 +1,16 @@
+---
+- name: Getting ready to install Red Hat Insights
+  hosts: all
+  become: yes
+  
+  tasks:
+  
+  - name: Making sure the Insights Client is installed.
+    yum:
+      name: 
+        - insights-client
+      state: present
+  
+  - name: Registering the system with Red Hat Insights
+    command: insights-client --register
+  
