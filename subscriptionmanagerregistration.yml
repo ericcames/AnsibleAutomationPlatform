@@ -1,0 +1,18 @@
+---
+- Registering system with Red Hat
+  hosts: all
+  become: yes
+  gather_facts: yes
+  vars:
+    username: {{ username }}
+    password: {{ password }}
+    pool_id: {{ pool_id }}
+    
+  tasks:
+  
+  - name: Register my machine
+    command: subscription-manager register --username={{ username }} --password={{ password }}
+    
+  - name: Add servers to pool {{ pool_id }}
+    command: subscription-manager attach --pool={{ pool_id }}
+    
