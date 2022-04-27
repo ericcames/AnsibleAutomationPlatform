@@ -4,9 +4,9 @@
   become: yes
   gather_facts: yes
   vars:
-    username: {{ username }}
-    password: {{ password }}
-    pool_id: {{ pool_id }}
+    username: "{{ username }}"
+    password: "{{ password }}"
+    pool_id: "{{ pool_id }}"
     
   tasks:
   
