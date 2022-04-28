@@ -2,7 +2,7 @@
 - name: Fact dump
   hosts: all
   vars:
-    ansible_connection = winrm
+    ansible_connection: winrm
   tasks:
     - name: Print all facts
       debug:
