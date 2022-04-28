@@ -8,4 +8,4 @@
     register: powershellresult
     
   - debug:
-      var: powershellresult.output
+      var: powershellresult
