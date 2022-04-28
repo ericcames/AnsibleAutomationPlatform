@@ -1,0 +1,7 @@
+---
+- name: Get me list of all the disks on my machine
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Issue the powershell command to give a list of disks
+    win_shell: Get-Partition
