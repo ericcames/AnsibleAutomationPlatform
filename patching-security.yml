@@ -1,0 +1,9 @@
+---
+- name: Patching hosts for security errata
+  hosts: all
+  tasks:
+    - name: Install security updates
+      yum:
+        name: "*"
+        security: yes
+        state: latest
