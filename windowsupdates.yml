@@ -1,7 +1,7 @@
 ---
 - name: Installing updates on my windows machine
-    hosts: all
-    gather_facts: yes
+  hosts: all
+  gather_facts: yes
   tasks:
   - name: Install all critical and security updates
     win_updates:
