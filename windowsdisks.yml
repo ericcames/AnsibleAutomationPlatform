@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
   - name: Issue the powershell command to give a list of disks
-    win_shell: Get-Partition
+    win_shell: Get-Disk
     register: powershellresult
     
   - debug:
