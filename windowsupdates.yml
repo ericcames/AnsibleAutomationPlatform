@@ -1,14 +1,16 @@
 ---
-- name:  
+- name: Installing updates on my windows machine
+    hosts: all
+    gather_facts: yes
+  tasks:
+  - name: Install all critical and security updates
+    win_updates:
+      category_names:
+      - CriticalUpdates
+      - SecurityUpdates
+      state: installed
+    register: update_result
 
-- name: Install all critical and security updates
-  win_updates:
-    category_names:
-    - CriticalUpdates
-    - SecurityUpdates
-    state: installed
-  register: update_result
-
-- name: Reboot host if required
-  win_reboot:
-  when: update_result.reboot_required
+  - name: Reboot host if required
+    win_reboot:
+    when: update_result.reboot_required
