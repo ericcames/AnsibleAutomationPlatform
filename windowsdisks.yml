@@ -5,3 +5,7 @@
   tasks:
   - name: Issue the powershell command to give a list of disks
     win_shell: Get-Partition
+    register: powershellresult
+    
+  - debug:
+    var: powershellresult.output
