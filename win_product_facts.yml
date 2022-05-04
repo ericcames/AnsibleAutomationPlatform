@@ -1,0 +1,8 @@
+---
+- name: win_product_facts from docs.ansible.com
+  hosts: all
+  
+  tasks:
+
+  - name: Get product id and product key
+    win_product_facts:
