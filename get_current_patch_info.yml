@@ -1,0 +1,11 @@
+---
+- name: What is the current patch level of the machine
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Issue the powershell command to give the current patch info
+    win_shell: Get-CurrentPatchInfo
+    register: powershellresult
+    
+  - debug:
+      var: powershellresult
