@@ -1,0 +1,11 @@
+---
+- name: What is my computer information
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Issue the powershell command to give the current cumputer info
+    win_shell: Get-ComputerInfo
+    register: powershellresult
+    
+  - debug:
+      var: powershellresult
