@@ -10,9 +10,10 @@
     
   tasks:
   
-  - name: Register my machine
-    command: subscription-manager register --username={{ username }} --password={{ password }}
-    
-  - name: Add servers to pool {{ pool_id }}
-    command: subscription-manager attach --pool={{ pool_id }}
+  - name: Register and subscribe the system 
+    redhat_subscription:
+      username: "{{ username }}"
+      password: "{{ password }}"
+      pool_ids: "{{ pool_id }}"
+      state: present
     
