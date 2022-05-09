@@ -8,7 +8,7 @@
   tasks:
   
   - name: 'Preflight Varible check :: account'
-      ansible.builtin.fail: msg='Please include the account to the variable "account"'
+    ansible.builtin.fail: msg='Please include the account to the variable "account"'
       run_once: true
       when: 'account is not defined'
   
