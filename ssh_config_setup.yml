@@ -1,0 +1,21 @@
+---
+- name: Setting up SSH Config file for a user
+  hosts: all
+  gather_facts: no
+  vars:
+    user_account: "{{ account }}"
+    
+  tasks:
+  
+  - name: 'Preflight Varible check :: account'
+      ansible.builtin.fail: msg='Please include the account to the variable "account"'
+      run_once: true
+      when: 'account is not defined'
+  
+  - name: Copy the default ssh config file into place for user "{{ account }}"
+    ansible.builtin.copy:
+      src: files_to_deploy/ssh_config
+      dest: "~{{ account }}/.ssh/config"
+      owner: "{{ account }}"
+      group: "{{ account }}"
+      mode: 0600
