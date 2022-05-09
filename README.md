@@ -21,3 +21,9 @@
   <li>ansible webservers -m setup -a 'gather_subset=network filter=ansible_interfaces'</li>
   <li>ansible webservers -m setup -a 'gather_subset=network filter=ansible_ens4'</li>
 </ul>
+
+## On server roles documentation
+
+<ul>
+  <li>cat /usr/share/doc/rhel-system-roles/network/README.md</li>
+</ul>
