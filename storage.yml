@@ -2,7 +2,7 @@
 - name: Ensure Apache Storage Configuration
   hosts: webservers
   vars_files:
-    - storage_vars.yml
+    - vars/storage_vars.yml
   tasks:
     - name: Correct partitions exist on /dev/vdb
       parted:
