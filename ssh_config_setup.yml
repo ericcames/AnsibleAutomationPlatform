@@ -9,8 +9,8 @@
   
   - name: 'Preflight Varible check :: account'
     ansible.builtin.fail: msg='Please include the account to the variable "account"'
-      run_once: true
-      when: 'account is not defined'
+    run_once: true
+    when: 'account is not defined'
   
   - name: Copy the default ssh config file into place for user "{{ account }}"
     ansible.builtin.copy:
