@@ -6,7 +6,6 @@
   vars:
     username: "{{ username }}"
     password: "{{ password }}"
-    pool_id: "{{ pool_id }}"
     
   tasks:
   
@@ -14,6 +13,4 @@
     redhat_subscription:
       username: "{{ username }}"
       password: "{{ password }}"
-      pool_ids: "{{ pool_id }}"
       state: present
-    
