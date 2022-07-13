@@ -1,0 +1,9 @@
+---
+  - name: power down all my machines
+    hosts: all
+    gather_facts: no
+       
+    tasks:
+ 
+    - name: Unconditionally shut down the machine with all defaults
+      community.general.shutdown:
