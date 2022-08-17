@@ -6,7 +6,7 @@
   tasks:
   
   - name: Making sure the Insights Client is installed.
-    yum:
+    ansible.builtin.yum:
       name: 
         - insights-client
       state: present
