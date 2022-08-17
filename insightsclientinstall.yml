@@ -2,6 +2,7 @@
 - name: Getting ready to install Red Hat Insights
   hosts: all
   become: yes
+  gather_facts: no
   
   tasks:
   
@@ -13,4 +14,3 @@
   
   - name: Registering the system with Red Hat Insights
     command: insights-client --register
-  
