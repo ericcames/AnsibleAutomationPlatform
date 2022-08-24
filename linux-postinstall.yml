@@ -65,7 +65,7 @@
         owner: root
         group: root
         state: link
-      when: "{{ansible_distribution_release != 'Maipo'}}"
+      when: "ansible_distribution_release != 'Maipo'"
     
     - name: Unconditionally reboot the machine with all defaults
       ansible.builtin.reboot:
