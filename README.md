@@ -1,4 +1,4 @@
-# AnsibleAutomationPlatform
+# Ansible Automation Platform
 
 ## Ansible facts
 
