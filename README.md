@@ -4,6 +4,7 @@
 - [Visual Studio Code](https://code.visualstudio.com/ "Code editing Redifined")  
 ![alt text](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/images/vscodeext.png "Logo Title Text 1")
 - [Are you using VI? Put this in your .vimrc file](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/files_to_deploy/vimrc "Are you using VI? Put this in your .vimrc file")  
+![alt text](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/images/vimrc.png "Logo Title Text 1")
 
 
 ## Ansible facts
