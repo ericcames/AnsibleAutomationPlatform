@@ -1,8 +1,10 @@
 # Ansible Automation Platform (AAP)
 
 **Playbook Editing**  
+
+![alt text](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/images/vscodeext.png "Logo Title Text 1")
 - [Are you using VI? Put this in your .vimrc file](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/files_to_deploy/vimrc "Are you using VI? Put this in your .vimrc file")  
-- This playbook requires a username and password to be input at runtime.  This can be done using a survey via the Anisble Automation Platform web interface.  The credentials are the credentials used for access to access.redhat.com.
+
 
 ## Ansible facts
 
