@@ -1,7 +1,7 @@
 ---
 - name: Linux post install procedures
   hosts: all
-  gather_facts: false
+  gather_facts: true
   tasks:
     - name: Upgrade all packages
       ansible.builtin.yum:
@@ -65,6 +65,7 @@
         owner: root
         group: root
         state: link
+      when ansible_facts["major_release"] == "8"
     
     - name: Unconditionally reboot the machine with all defaults
       ansible.builtin.reboot:
