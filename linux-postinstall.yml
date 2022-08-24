@@ -1,0 +1,15 @@
+---
+- name: Linux post install procedures
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Upgrade all packages
+      ansible.builtin.yum:
+        name: '*'
+        state: latest
+
+    - name: Make sure firewalld service unit is running
+      ansible.builtin.systemd:
+        state: started
+        name: firewalld
+        enabled: yes
