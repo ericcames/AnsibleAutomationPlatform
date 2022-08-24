@@ -10,7 +10,7 @@
 - [Windows performance](https://docs.ansible.com/ansible/latest/user_guide/windows_performance.html "Windows performance")  
 - [Ansible Playbooks Improving Performance](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/files/Ansible%20-%20Playbook%20Performance.pdf "Ansible Playbooks Improving Performance")
 
-**Official Youtube Channell**
+**Official Youtube Channel**
 - [Red Hat Ansible Automation](https://www.youtube.com/c/ansibleautomation "Red Hat Automation")
 
 
