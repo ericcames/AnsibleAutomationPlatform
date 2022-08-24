@@ -7,6 +7,10 @@
 ![alt text](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/images/vimrc.png "Logo Title Text 1")
 
 **Playbook Performance**
+- [Windows performance](https://docs.ansible.com/ansible/latest/user_guide/windows_performance.html "Windows performance")  
+
+
+
 
 ## Ansible facts
 
