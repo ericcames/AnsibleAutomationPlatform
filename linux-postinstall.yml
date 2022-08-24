@@ -57,6 +57,14 @@
         owner: root
         group: root
         mode: u+rw,g-wx,o-wx
+
+    - name: Get rid of the cockpit.socket message
+      ansible.builtin.file:
+        src: /dev/null
+        dest: /etc/motd.d/cockpit
+        owner: root
+        group: root
+        state: link
     
     - name: Unconditionally reboot the machine with all defaults
       ansible.builtin.reboot:
