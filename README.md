@@ -8,34 +8,9 @@
 
 **Playbook Performance**
 - [Windows performance](https://docs.ansible.com/ansible/latest/user_guide/windows_performance.html "Windows performance")  
+- [Ansible Playbooks Improving Performance](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/files/Ansible%20-%20Playbook%20Performance.pdf "Ansible Playbooks Improving Performance")
 
 
 
 
-## Ansible facts
 
-<ul>
-  <li>ansible all -m setup</li>
-</ul>
-
-## Ansible facts for storage
-
-<ul>
-  <li>ansible all -m setup -a 'filter=ansible_devices'</li>
-  <li>ansible all -m setup -a 'filter=ansible_device_links'</li>
-  <li>ansible all -m setup -a 'filter=ansible_mounts'</li>
-  <li>ansible all -a lsblk</li>
-</ul>
-
-## Ansible facts for network
-
-<ul>
-  <li>ansible webservers -m setup -a 'gather_subset=network filter=ansible_interfaces'</li>
-  <li>ansible webservers -m setup -a 'gather_subset=network filter=ansible_ens4'</li>
-</ul>
-
-## On server roles documentation
-
-<ul>
-  <li>cat /usr/share/doc/rhel-system-roles/network/README.md</li>
-</ul>
