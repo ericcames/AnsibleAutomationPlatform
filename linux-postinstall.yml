@@ -38,7 +38,7 @@
             
     - name: Reloading sshd service 
       ansible.builtin.systemd:
-        state: reload
+        state: reloaded
         name: sshd.service
         enabled: yes
       
