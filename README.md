@@ -1,5 +1,9 @@
 # Ansible Automation Platform (AAP)
 
+**Ansible Standards**
+- Use fully qualified domain names (FQDN) to refer to your endpoints
+- Use fuilly qualified module names to refer to your ansible modules
+
 **Playbook Editing**  
 - [Visual Studio Code](https://code.visualstudio.com/ "Code editing Redifined")  
 ![alt text](https://github.com/ericcames/AnsibleAutomationPlatform/blob/main/images/vscodeext.png "Logo Title Text 1")
