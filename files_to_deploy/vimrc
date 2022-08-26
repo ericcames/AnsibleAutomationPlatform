@@ -1,4 +1,0 @@
-autocmd FileType yaml setlocal ai ts=2 sw=2 et nu cuc
-autocmd FileType yaml colo desert
-autocmd FileType yml setlocal ai ts=2 sw=2 et nu cuc
-autocmd FileType yml colo desert

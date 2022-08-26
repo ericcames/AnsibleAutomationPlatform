@@ -16,7 +16,7 @@
     
     - name: Copy the sshd-banner file into place
       ansible.builtin.copy:
-        src: files_to_deploy/sshd-banner
+        src: files/sshd-banner
         dest: /etc/ssh/sshd-banner
         owner: root
         group: root
@@ -44,7 +44,7 @@
       
     - name: Copy the new /etc/motd into place
       ansible.builtin.copy:
-        src: files_to_deploy/motd
+        src: files/motd
         dest: /etc/motd
         owner: root
         group: root
@@ -52,7 +52,7 @@
         
     - name: Copy the new /etc/issue into place
       ansible.builtin.copy:
-        src: files_to_deploy/issue
+        src: files/issue
         dest: /etc/issue
         owner: root
         group: root

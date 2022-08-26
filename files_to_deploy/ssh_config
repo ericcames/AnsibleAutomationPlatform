@@ -1,6 +1,0 @@
-Host *
-  StrictHostKeyChecking no
-  UserKnowHostsFile=/dev/mull
-  AddressFamily inet
-  Compression yes
-  PreferredAuthentications=publickey
