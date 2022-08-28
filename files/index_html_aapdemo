@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome to an Ansible Automation Platform (AAP) Demo</h1>
+<img src="aap.png" alt="">
+
+
+<p>AAP Rocks!!</p>
+
+<a href="https://github.com/ericcames/AnsibleAutomationPlatform">My AAP Cribnotes</a></p>
+
+<div id="current_date"></p>
+<script>
+document.getElementById("current_date").innerHTML = Date();
+</script>
+
+</body>
+</html>
