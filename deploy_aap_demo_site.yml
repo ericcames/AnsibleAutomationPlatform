@@ -1,0 +1,22 @@
+---
+- name: Deploy the AAP Demo website
+  hosts: all
+  gather_facts: false
+  
+  tasks:
+
+    - name: Copy the image file for the website
+      ansible.builtin.copy:
+        src: images/aap.png
+        dest: /var/www/html
+        owner: root
+        group: root
+        mode: u+rw,g-wx,o-wx
+
+    - name: Copy the index.html for the website
+      ansible.builtin.copy:
+        src: files/index_html_aapdemo
+        dest: /var/www/html
+        owner: root
+        group: root
+        mode: u+rw,g-wx,o-wx
