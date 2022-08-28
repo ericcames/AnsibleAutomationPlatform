@@ -16,7 +16,7 @@
     - name: Copy the index.html for the website
       ansible.builtin.copy:
         src: files/index_html_aapdemo
-        dest: /var/www/html
+        dest: /var/www/html/index.html
         owner: root
         group: root
         mode: u+rw,g-wx,o-wx
