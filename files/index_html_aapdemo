@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Ansible Automation Platform</title>
+</head>
 <body>
 
 <h1>Welcome to an Ansible Automation Platform (AAP) Demo</h1>
 <img src="aap.png" alt="">
 
+<p>This website was built using Ansible Automation Platform (AAP).  The ansible playbooks that built this first built a Amazon Web Serivces (AWS) Virtual Private Cloud (VPC), then went on to build a Red Hat Enterprise Linux (RHEL) 8 machine.  Once the linx machine was on the network ansible playbooks were used to subscribe the machine to the Red Hat customer portal and register the machine with Red Hat Insights, a post install process was run to secure the machine and then Linux, Apache, Mariadb, PHP (LAMP) stack was deployed an is what is making this webpage available to you now!</p>
 
-<p>AAP Rocks!!</p>
+<p>Please direct sales questions to:
+<a href="mailto:greg.wormmeester@redhat.com">Greg.Wormmeester@redhat.com</a></p>
 
-<a href="https://github.com/ericcames/AnsibleAutomationPlatform">My AAP Cribnotes</a></p>
+<p>Please direct technical questions to:
+<a href="mailto:eric.ames@redhat.com">Eric.Ames@redhat.com</a></p>
+
+
+<ul>
+  <li><a href="https://github.com/ericcames/AWS">Ansible playbooks for building AWS related items are here.</a></li>
+  <li><a href="https://github.com/ericcames/RHSM">Ansible playbooks for interacting with the customer portal are here.</a></li>
+  <li><a href="https://github.com/ericcames/RedHatInsights">Ansible playbooks for interacting with Red Hat Insights are here.</a></li>
+  <li><a href="https://github.com/ericcames/AnsibleAutomationPlatform">Good information to have related to AAP</a></li>
+</ul>
+
+<p>This VPC will auto destruct at 8 pm PHX time.  Thank you for considering Ansible Automation Platform! Automation as a service is a journey not a project.  :-)
 
 <div id="current_date"></p>
 <script>
