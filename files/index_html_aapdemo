@@ -24,7 +24,8 @@
   <li><a href="https://github.com/ericcames/AnsibleAutomationPlatform">Good information to have related to AAP</a></li>
 </ul>
 
-<p>This VPC will auto destruct at 18:00 hrs PHX time.  Thank you for considering Ansible Automation Platform! Automation as a service is a journey not a project.  :-)
+<p><b>Thank you for considering Ansible Automation Platform!</b> Automation as a service is a journey not a project.  :-)</p>
+<p style="color:red;">This VPC will auto destruct at 18:00 hrs PHX time.</p>
 
 <div id="current_date"></p>
 <script>
