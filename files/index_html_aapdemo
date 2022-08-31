@@ -9,7 +9,7 @@
 <img src="aap.png" alt="">
 
 <p>This website was built using Ansible Automation Platform (AAP).<br/>
-The ansible playbooks that built this first built a Amazon Web Serivces (AWS)<br/>
+The ansible playbooks that built this first built a Amazon Web Services (AWS)<br/>
 Virtual Private Cloud (VPC), then went on to build a Red Hat Enterprise<br/>
 Linux (RHEL) 8 machine.  Once the linux machine was on the network ansible<br/>
 playbooks were used to subscribe the machine to the Red Hat customer portal<br/>
