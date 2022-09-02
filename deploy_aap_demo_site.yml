@@ -19,6 +19,10 @@
         cmd: "date '+%H:%M:%S'"
       register: website_start_time
 
+    - name: Debug vpc_create_start_time
+      ansible.builtin.debug:
+        var: vpc_create_start_time
+
     - name: Copy the image file for the website
       ansible.builtin.copy:
         src: images/aap.png
