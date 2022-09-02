@@ -1,0 +1,21 @@
+---
+  - name: foobar
+    hosts: localhost
+    
+    tasks:
+    
+    - name: Display the current timestamp in YYYY-MM-DD
+      ansible.builtin.debug:
+        var: ansible_date_time.date
+
+    - name: Display the current timestamp in YYYY-MM-DD
+      ansible.builtin.debug:
+        var: ansible_date_time.time
+
+    #- name: hello i am here
+    #  ansible.builtin.set_fact: 
+    #    mydate="{{lookup('pipe','date +%Y%m%d%H%M%S')}}"
+    
+    #- name: WTF
+    #  ansible.buitlin.debug: 
+    #    var: mydate
