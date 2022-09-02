@@ -19,15 +19,3 @@
     - name: Time
       ansible.builtin.debug: 
         var: vpc_create_time
-
-    - name: Pausing for 1 minute to allow the machine to come up
-      ansible.builtin.pause:
-        minutes: 1
-
-    - name: VPC Finished time set fact
-      ansible.builtin.set_fact: 
-        vpc_finish_time: “{{ lookup(‘pipe’,’date +%Y-%m-%d %H:%M:%S’) }}”
-    
-    - name: VPC finished time
-      ansible.builtin.debug: 
-        var: vpc_finish_time
