@@ -5,19 +5,19 @@
   
   tasks:
 
+    - name: Set timezone to America/Phoenix
+      community.general.timezone:
+        name: America/Phoenix
+
     - name: Get the create_date
       ansible.builtin.command:
         cmd: "date '+%Y-%m-%d'"
       register: create_date
-      environment:
-        TZ: US/Phoenix
       
     - name: Get the website start Time 
       ansible.builtin.command:
         cmd: "date '+%H:%M:%S'"
       register: website_start_time
-      environment:
-        TZ: US/Phoenix
 
     - name: Copy the image file for the website
       ansible.builtin.copy:
