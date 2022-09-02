@@ -33,7 +33,7 @@ was deployed an is what is making this webpage available to you now!</p>
 
 <h3>Provisioning Details</h3>
 <ul>
-  <li>Create date: '{{ create_date }}'</li>
+  <li>Create date: '{{ create_date.stdout }}'</li>
   <li>VPC create time: '{{ vpc_create_start_time }}'</li>
   <li>Instance create time:</li>
   <li>AWS sync start time:</li>
@@ -41,7 +41,7 @@ was deployed an is what is making this webpage available to you now!</p>
   <li>Post install start time:</li>
   <li>Red Hat Insights registration time:</li>
   <li>LAMP deployment start time:</li>
-  <li>Website start time: {{ website_start_time }}</li>
+  <li>Website start time: {{ website_start_time.stdout }}</li>
   <li>Completion notification time:</li>
 </ul>
 
