@@ -3,19 +3,31 @@
     hosts: localhost
     
     tasks:
+  
+    - name: hello i am here
+      ansible.builtin.set_fact: 
+        create_date: "{{ ansible_date_time.date }}"
     
-    - name: Display the current timestamp in YYYY-MM-DD
-      ansible.builtin.debug:
-        var: ansible_date_time.date
+    - name: WTF
+      ansible.builtin.debug: 
+        var: create_date
 
-    - name: Display the current timestamp in YYYY-MM-DD
-      ansible.builtin.debug:
-        var: ansible_date_time.time
-
-    #- name: hello i am here
-    #  ansible.builtin.set_fact: 
-    #    mydate="{{lookup('pipe','date +%Y%m%d%H%M%S')}}"
+    - name: overhere
+      ansible.builtin.set_fact: 
+        vpc_create_time: "{{ ansible_date_time.time }}"
     
-    #- name: WTF
-    #  ansible.buitlin.debug: 
-    #    var: mydate
+    - name: Time
+      ansible.builtin.debug: 
+        var: vpc_create_time
+
+    - name: Pausing for 1 minute to allow the machine to come up
+      ansible.builtin.pause:
+        minutes: 1
+
+    - name: VPC Finished time set fact
+      ansible.builtin.set_fact: 
+        vpc_finish_time: “{{ lookup(‘pipe’,’date +%Y-%m-%d %H:%M:%S’) }}”
+    
+    - name: VPC finished time
+      ansible.builtin.debug: 
+        var: vpc_finish_time
