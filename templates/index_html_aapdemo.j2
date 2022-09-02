@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ansible Automation Platform</title>
+</head>
+<body>
+
+<h1>Welcome to an Ansible Automation Platform (AAP) Demo</h1>
+<img src="aap.png" alt="">
+
+<p>This website was built using Ansible Automation Platform (AAP).<br/>
+The ansible playbooks that built this first built a Amazon Web Services (AWS)<br/>
+Virtual Private Cloud (VPC), then went on to build a Red Hat Enterprise<br/>
+Linux (RHEL) 8 machine.  Once the linux machine was on the network ansible<br/>
+playbooks were used to subscribe the machine to the Red Hat customer portal<br/>
+and register the machine with Red Hat Insights, a post install process was<br/>
+run to secure the machine and then Linux, Apache, Mariadb, PHP (LAMP) stack<br/>
+was deployed an is what is making this webpage available to you now!</p>
+
+<p>Please direct sales questions to:
+<a href="mailto:gwormmee@redhat.com">Greg Wormmeester</a></p>
+
+<p>Please direct technical questions to:
+<a href="mailto:eric.ames@redhat.com">Eric Ames</a></p>
+
+<ul>
+  <li><a href="https://github.com/ericcames/AWS">Ansible playbooks for building AWS related items are here.</a></li>
+  <li><a href="https://github.com/ericcames/RHSM">Ansible playbooks for interacting with the customer portal are here.</a></li>
+  <li><a href="https://github.com/ericcames/RedHatInsights">Ansible playbooks for interacting with Red Hat Insights are here.</a></li>
+  <li><a href="https://github.com/ericcames/AnsibleAutomationPlatform">Good information to have related to AAP</a></li>
+  <li><a href="https://github.com/ericcames/RHOpenSCAP">Red Hat Open Security Content Automation Protocol</a></li>
+</ul>
+
+<h3>Provisioning Details</h3>
+<ul>
+  <li>Create date: '{{ create_date }}'</li>
+  <li>VPC create time: '{{ vpc_create_start_time }}'</li>
+  <li>Instance create time:</li>
+  <li>AWS sync start time:</li>
+  <li>Red Hat subscription time:</li>
+  <li>Post install start time:</li>
+  <li>Red Hat Insights registration time:</li>
+  <li>LAMP deployment start time:</li>
+  <li>Website start time:</li>
+  <li>Completion notification time:</li>
+</ul>
+
+<p><b>Thank you for considering Ansible Automation Platform!</b><br/>Automation as a service is a journey not a project.  :-)</p>
+<p style="color:red;">This VPC will auto destruct at 18:00 hrs PHX time.</p>
+
+<div style="color:green;" id="current_date"></p>
+<script>
+document.getElementById("current_date").innerHTML = Date();
+</script>
+
+</body>
+</html>
