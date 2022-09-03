@@ -39,10 +39,6 @@
       ansible.builtin.debug:
         var: lamp_time
 
-    - name: Debug completion_time
-      ansible.builtin.debug:
-        var: completion_time
-
     - name: Copy the image file for the website
       ansible.builtin.copy:
         src: images/aap.png
