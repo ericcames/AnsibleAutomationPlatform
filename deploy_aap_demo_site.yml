@@ -19,13 +19,29 @@
         cmd: "date '+%H:%M:%S'"
       register: website_start_time
 
-    - name: Debug vpc_create_start_time
+    - name: Debug vpc_create_time
       ansible.builtin.debug:
-        var: vpc_create_start_time
+        var: vpc_create_time
 
-    - name: Debug machine_create_start_time
+    - name: Debug machine_create_time
       ansible.builtin.debug:
-        var: machine_create_start_time
+        var: machine_create_time
+
+    - name: Debug aws_sync_time
+      ansible.builtin.debug:
+        var: aws_sync_time
+
+    - name: Debug post_install_time
+      ansible.builtin.debug:
+        var: post_install_time
+
+    - name: Debug lamp_time
+      ansible.builtin.debug:
+        var: lamp_time
+
+    - name: Debug completion_time
+      ansible.builtin.debug:
+        var: completion_time
 
     - name: Copy the image file for the website
       ansible.builtin.copy:
