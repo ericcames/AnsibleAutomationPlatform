@@ -5,10 +5,6 @@
   
   tasks:
 
-    - name: Set timezone to Europe/London
-      community.general.timezone:
-        name: Europe/London
-
     - name: Get the create_date
       ansible.builtin.command:
         cmd: "date '+%Y-%m-%d'"

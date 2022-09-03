@@ -34,11 +34,11 @@ was deployed an is what is making this webpage available to you now!</p>
 <h3>Provisioning Details</h3>
 <ul>
   <li><b>Create date:</b> {{ create_date.stdout }} </li>
-  <li><b>VPC create time:</b> {{ vpc_create_time.stdout }} </li>
-  <li><b>Instance create time:</b> {{ machine_create_time.stdout }} </li>
-  <li><b>AWS sync start time:</b> {{ aws_sync_time.stdout }} </li>
+  <li><b>VPC create time:</b> {{ vpc_create_time }} </li>
+  <li><b>Instance create time:</b> {{ machine_create_time }} </li>
+  <li><b>AWS sync start time:</b> {{ aws_sync_time }} </li>
   <li><b>Red Hat subscription</b></li>
-  <li><b>Post install start time:</b> {{ post_install_time.stdout }} </li>
+  <li><b>Post install start time:</b> {{ post_install_time }} </li>
     <ul>
       <li>Software updates</li>
       <li>Disable root login</li>
@@ -46,7 +46,7 @@ was deployed an is what is making this webpage available to you now!</p>
       <li>Reboot the machine</li>
     </ul>
   <li><b>Red Hat Insights registration</b></li>
-  <li><b>LAMP deployment start time:</b> {{ lamp_time.stdout }} </li>
+  <li><b>LAMP deployment start time:</b> {{ lamp_time }} </li>
   <li><b>Website start time: </b> {{ website_start_time.stdout }} </li>
 </ul>
 
