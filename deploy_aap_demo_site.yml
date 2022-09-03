@@ -5,9 +5,9 @@
   
   tasks:
 
-    - name: Set timezone to America/Phoenix
+    - name: Set timezone to Europe/London
       community.general.timezone:
-        name: America/Phoenix
+        name: Europe/London
 
     - name: Get the create_date
       ansible.builtin.command:
@@ -22,6 +22,10 @@
     - name: Debug vpc_create_start_time
       ansible.builtin.debug:
         var: vpc_create_start_time
+
+    - name: Debug machine_create_start_time
+      ansible.builtin.debug:
+        var: machine_create_start_time
 
     - name: Copy the image file for the website
       ansible.builtin.copy:
