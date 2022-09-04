@@ -18,10 +18,10 @@ run to secure the machine and then Linux, Apache, Mariadb, PHP (LAMP) stack<br/>
 was deployed an is what is making this webpage available to you now!</p>
 
 <p>Please direct sales questions to:
-<a href="mailto:gwormmee@redhat.com">Greg Wormmeester</a></p>
+<a href="mailto:{{ sales_email_id }}@redhat.com">{{ sales_person_name }}</a></p>
 
 <p>Please direct technical questions to:
-<a href="mailto:eric.ames@redhat.com">Eric Ames</a></p>
+<a href="mailto:{{ tech_email_id }}@redhat.com">{{ tech_person_name }}</a></p>
 
 <ul>
   <li><a href="https://github.com/ericcames/AWS">Ansible playbooks for building AWS related items are here.</a></li>
@@ -37,7 +37,7 @@ was deployed an is what is making this webpage available to you now!</p>
   <li><b>VPC create time:</b> {{ vpc_create_time }} </li>
   <li><b>Instance create time:</b> {{ machine_create_time }} </li>
   <li><b>AWS sync start time:</b> {{ aws_sync_time }} </li>
-  <li><b>Red Hat subscription</b></li>
+  <li><b>Red Hat subscription</b> {{ subscription_time }} </li>
   <li><b>Post install start time:</b> {{ post_install_time }} </li>
     <ul>
       <li>Software updates</li>
@@ -45,18 +45,18 @@ was deployed an is what is making this webpage available to you now!</p>
       <li>Configurartion changes</li>
       <li>Reboot the machine</li>
     </ul>
-  <li><b>Red Hat Insights registration</b></li>
+  <li><b>Red Hat Insights registration</b> {{ insights_time }} </li>
   <li><b>LAMP deployment start time:</b> {{ lamp_time }} </li>
   <li><b>Website start time: </b> {{ website_start_time.stdout }} </li>
 </ul>
 
 <p><b>Thank you for considering Ansible Automation Platform!</b><br/>Automation as a service is a journey not a project.  :-)</p>
-<p style="color:red;">This VPC will auto destruct at 01:00 hrs UTC time.</p>
+<p style="color:red;">The "AAP Daily Demo" will auto destruct at 01:00 hrs UTC time.</p>
 
 <div style="color:green;" id="current_date"></p>
 <script>
-document.getElementById("current_date").innerHTML = Date();
+document.getElementById("current_date").innerHTML = Date.UTC();
 </script>
-
+<p>Copyright © Ansible West Tiger Team<?php echo date("Y"); ?></p>
 </body>
 </html>
