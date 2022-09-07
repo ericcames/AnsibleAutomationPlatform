@@ -25,3 +25,6 @@
 
 **The AWX Project**
 - [Community Ansible](https://www.ansible.com/products/awx-project/faq "The AWX Project")
+
+**How are "managed nodes" defined as part of the Red Hat Ansible Automation Platform offering?**
+- [Managed nodes](https://access.redhat.com/articles/3331481?extIdCarryOver=true&sc_cid=701f2000001OH7YAAW "Managed nodes")
