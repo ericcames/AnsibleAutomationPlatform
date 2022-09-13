@@ -4,6 +4,9 @@
 - Use fully qualified domain names (FQDN) to refer to your endpoints
 - Use fuilly qualified module names to refer to your ansible modules
 
+**Ansible Automation Platform Upgrade Assistant**
+- [Upgrade Assistant](https://access.redhat.com/labs/aapua/ "Upgrade Assistant")
+
 **Ansible Documentation**
 - [Ansible userguide](https://docs.ansible.com/automation-controller/latest/html/userguide/ "Ansible userguide")
 
