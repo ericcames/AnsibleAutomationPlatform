@@ -10,17 +10,7 @@
        public_key: "{{ public_key }}"
 
     tasks:
-    
-    - name: 'Preflight Varible check :: account'
-      fail: msg='Please include the account to the variable "account"'
-      run_once: true
-      when: 'account is not defined'
-      
-    - name: 'Preflight Varible check :: home_directory'
-      fail: msg='Please include the home_directory to the variable "home_directory"'
-      run_once: true
-      when: 'home_directory is not defined'
-     
+       
     - name: Creating the "{{ account }}" user account and the "{{ home_directory }}/{{ account }}" home directory
       ansible.builtin.user:
         name: "{{ account }}"
