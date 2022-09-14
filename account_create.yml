@@ -17,7 +17,7 @@
         home: "{{ home_directory }}/{{ account }}"
         create_home: true
         comment: "{{ user_comment }}"
-        password: "{{ password }}"
+        password: "{{ password | password_hash('sha512') }}"
         state: present
         remove: false
         system: true
