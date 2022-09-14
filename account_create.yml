@@ -22,7 +22,7 @@
       when: 'home_directory is not defined'
      
     - name: Creating the "{{ account }}" user account and the "{{ home_directory }}/{{ account }}" home directory
-      user:
+      ansible.builtin.user:
         name: "{{ account }}"
         home: "{{ home_directory }}/{{ account }}"
         create_home: true
@@ -32,7 +32,7 @@
         system: true
  
     - name: "{{ account }} is included in sudoers.d directory"
-      copy:
+      ansible.builtin.copy:
         dest: "/etc/sudoers.d/{{ account }}"
         content: "{{ account }} ALL=(ALL) NOPASSWD: ALL\n"
         owner: root
@@ -41,7 +41,7 @@
       when: account_sudoer == 'true'
       
     - name: Making sure the public key for the "{{ account }}" account is present
-      authorized_key:
+      ansible.posix.authorized_key:
         user: "{{ account }}"
         state: present
         key: "{{ public_key }}"
