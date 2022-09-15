@@ -18,7 +18,7 @@
     - name: Collect Hostname Inventory Name ID and last job run
       ansible.builtin.vars:
         _jquery: "results[*].{Name: name , Last_job_run: summary_fields.last_job.finished , InventoryID: summary_fields.inventory.id, InventoryName: summary_fields.inventory.name  }"
-      set_fact:
+        set_fact:
         nodedata: "{{nodedata|default({}) | combine ( {item.Name : item.Last_job_run }) }}"
       with_items: "{{ json_content.json | json_query(_jquery)}}"
 
