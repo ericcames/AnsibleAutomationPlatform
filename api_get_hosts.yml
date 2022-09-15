@@ -39,3 +39,7 @@
 
     - name: The nodedata
       ansible.builtin.debug: var=nodedata
+
+    - name: Number of unique endpoints
+      ansible.builtin.debug:
+        msg: "Unique endpoints: {{ nodedata | length }}"
