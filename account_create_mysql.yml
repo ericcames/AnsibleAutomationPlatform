@@ -1,0 +1,14 @@
+---
+  - name: Create Local MySQL Account
+    hosts: all
+    gather_facts: no
+    
+    tasks:
+       
+    - name: Create database user using hashed password with all database privileges
+      community.mysql.mysql_user:
+        name: "{{ account }}"
+        password: "{{ password | password_hash('sha512' }}"
+        encrypted: yes
+        priv: '*.*:ALL'
+        state: present
