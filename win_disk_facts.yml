@@ -5,7 +5,7 @@
   tasks:
 
     - name: Get disk facts
-      ansible.builtin.win_disk_facts:
+      community.windows.win_disk_facts:
 
     - name: Output first disk size
       debug:
