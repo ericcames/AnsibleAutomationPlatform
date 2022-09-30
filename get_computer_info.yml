@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: no
   tasks:
-  - name: Issue the powershell command to give the current cumputer info
+  - name: Issue the powershell command to give the current computer info
     win_shell: Get-ComputerInfo
     register: powershellresult
     
