@@ -35,6 +35,7 @@
 **Ansible Training**
 - [Ansible Training](https://www.ansible.com/products/ansible-training "Ansible Training")
 - [Getting Started](https://developers.redhat.com/products/ansible/getting-started "Getting Started")
+- [Ansible Workshops](https://github.com/ansible/workshops "Ansible Workshops")
 
 
 
