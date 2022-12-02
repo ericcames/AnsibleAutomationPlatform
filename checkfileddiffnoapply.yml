@@ -6,7 +6,7 @@
 
   tasks:
     - name: Grab Repo with source file
-      git:
+      ansible.builtin.git:
         repo: "{{ sourcefilerepo }}"
         dest: /tmp/demo
         accept_hostkey: yes
@@ -15,7 +15,7 @@
       run_once: true
 
     - name: Check for variance in File
-      copy:
+      ansible.builtin.copy:
         src: "/tmp/demo/{{ file2comp }}"
         dest: "/etc/{{ file2comp }}"
       check_mode: yes
@@ -23,7 +23,7 @@
       register : filechanges
 
     - name: stat check_mode
-      stat:
+      ansible.builtin.stat:
         path: "/etc/{{ file2comp }}"
       when: filechanges.changed == true
       register: statvar
