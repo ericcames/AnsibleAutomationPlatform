@@ -23,7 +23,7 @@
 **Official Youtube Channel**
 - [Red Hat Ansible Automation](https://www.youtube.com/c/ansibleautomation "Red Hat Automation")
 - [AnsibleFest 2021](https://www.youtube.com/watch?v=BLkm7KDKPEw "AnsibleFest 2021")  
-  check out the video @ 8:25 - Beth Boy JPMC Comunnity of practice  
+  check out the video @ 8:25 - Beth Boy JPMC Community of practice  
   check out the video @ 23:03 - Introducing automation mesh
 
 **The AWX Project**
