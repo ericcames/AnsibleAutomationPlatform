@@ -1,20 +1,20 @@
 ---
 - name: Deploy the AAP Demo website
-  hosts: all
+  hosts: "{{ my_server }}"
   gather_facts: false
   
   tasks:
 
     - name: Get the create_date
-      ansible.builtin.command:
-        cmd: "date '+%Y-%m-%d'"
       register: create_date
+      ansible.builtin.command:
+        cmd: "date '+%Y-%m-%d'"      
       
     - name: Get the website start Time 
+      register: website_start_time
       ansible.builtin.command:
         cmd: "date '+%H:%M:%S'"
-      register: website_start_time
-
+      
     - name: Debug vpc_create_time
       ansible.builtin.debug:
         var: vpc_create_time

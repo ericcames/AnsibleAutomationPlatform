@@ -1,7 +1,7 @@
 ---
   - name: Create Local Account
-    hosts: all
-    gather_facts: yes
+    hosts: "{{ my_server }}"
+    gather_facts: no
     vars:
        ansible_svc_account: "{{ account }}"
        ansible_home_directory: "{{ home_directory }}"
@@ -23,17 +23,17 @@
         system: true
  
     - name: "{{ account }} is included in sudoers.d directory"
+      when: account_sudoer == 'true'
       ansible.builtin.copy:
         dest: "/etc/sudoers.d/{{ account }}"
         content: "{{ account }} ALL=(ALL) NOPASSWD: ALL\n"
         owner: root
         group: root
         mode: 'ug+rwX,o='
-      when: account_sudoer == 'true'
       
     - name: Making sure the public key for the "{{ account }}" account is present
+      when: public_key != 'false'
       ansible.posix.authorized_key:
         user: "{{ account }}"
         state: present
         key: "{{ public_key }}"
-      when: public_key != 'false'
