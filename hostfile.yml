@@ -1,0 +1,10 @@
+---
+- name: create a host file
+  hosts: all
+
+  tasks:
+  
+    - name: create the file
+      template:
+        src: templates/myhosts.j2
+        dest: /var/tmp/myhosts
