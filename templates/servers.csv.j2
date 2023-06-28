@@ -1,0 +1,4 @@
+hostname,system_vendor,product_name,platform,memory(mb),number_of_cpus
+{% for hosts in ansible_play_hosts %}
+{{ hosts }},{{ hostvars[hosts]['ansible_system_vendor'] }},{{ hostvars[hosts]['ansible_product_name'] }},{{ hostvars[hosts]['ansible_distribution'] }} {{ hostvars[hosts]['ansible_distribution_version'] }},{{ hostvars[hosts]['ansible_memtotal_mb'] }},{{ hostvars[hosts]['ansible_processor_vcpus'] }}
+{% endfor %}
