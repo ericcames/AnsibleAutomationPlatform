@@ -23,10 +23,6 @@
       ansible.builtin.debug:
         var: machine_create_time
 
-    - name: Debug aws_sync_time
-      ansible.builtin.debug:
-        var: aws_sync_time
-
     - name: Debug post_install_time
       ansible.builtin.debug:
         var: post_install_time
