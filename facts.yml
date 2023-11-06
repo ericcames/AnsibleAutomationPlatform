@@ -5,3 +5,5 @@
     - name: Print all facts
       debug:
         var: ansible_facts
+
+    - name: Hello world
