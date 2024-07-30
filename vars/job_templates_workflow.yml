@@ -1,0 +1,1563 @@
+---
+controller_workflows:
+  - name: Daily Demo Linux Workflow
+    description: ''
+    extra_vars: |-
+      ---
+      ticket_number: "RITM0010386"
+    survey_enabled: false
+    allow_simultaneous: false
+    ask_variables_on_launch: false
+    inventory:
+    limit:
+    scm_branch:
+    ask_inventory_on_launch: false
+    ask_scm_branch_on_launch: false
+    ask_limit_on_launch: false
+    webhook_service: ''
+    webhook_credential:
+    ask_labels_on_launch: false
+    ask_skip_tags_on_launch: false
+    ask_tags_on_launch: false
+    skip_tags:
+    job_tags:
+    organization:
+      name: "Ames Company"
+      type: organization
+    related:
+      schedules: []
+      workflow_nodes:
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Network Create
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - VM Create
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Inventory Update
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Get Instance Info
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Red Hat Registration
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Configuration Management
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Provision Access
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Application Install
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Website deployment
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - sendmail
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Create a CMDB record
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Create CMDB relationship
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Create Incident
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data:
+          requested_item_state: '3'
+          requested_item_comments: Ansible Automation Platform is closing the request
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Update request ticket - success
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Reporting
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDL - Update request ticket - failure
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      labels: []
+      notification_templates_started: []
+      notification_templates_success: []
+      notification_templates_error: []
+      notification_templates_approvals: []
+      survey_spec: {}
+    natural_key:
+      organization:
+        name: "Ames Company"
+        type: organization
+      name: Daily Demo Linux Workflow
+      type: workflow_job_template
+
+  - name: Daily Demo Windows Workflow
+    description: ''
+    extra_vars: |-
+      ---
+      ticket_number: "RITM0010386"
+    survey_enabled: false
+    allow_simultaneous: false
+    ask_variables_on_launch: false
+    inventory:
+    limit:
+    scm_branch:
+    ask_inventory_on_launch: false
+    ask_scm_branch_on_launch: false
+    ask_limit_on_launch: false
+    webhook_service: ''
+    webhook_credential:
+    ask_labels_on_launch: false
+    ask_skip_tags_on_launch: false
+    ask_tags_on_launch: false
+    skip_tags:
+    job_tags:
+    organization:
+      name: "Ames Company"
+      type: organization
+    related:
+      schedules: []
+      workflow_nodes:
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Network Create
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - VM Create
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Inventory Update
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Get Instance Info
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Create CMDB relationship
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Create a CMDB record
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Powershell Improvement
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Website Setup
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - sendmail
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Provision Access
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Patching
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Create Incident
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            type: workflow_job_template_node
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Update request ticket - failure
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Update request ticket - success
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          type: workflow_job_template_node
+      labels: []
+      notification_templates_started: []
+      notification_templates_success: []
+      notification_templates_error: []
+      notification_templates_approvals: []
+      survey_spec: {}
+    natural_key:
+      organization:
+        name: "Ames Company"
+        type: organization
+      name: Daily Demo Windows Workflow
+      type: workflow_job_template
+
+  - name: Workflow Approval Demo
+    description: ''
+    extra_vars: "---"
+    organization:
+    survey_enabled: false
+    allow_simultaneous: false
+    ask_variables_on_launch: false
+    inventory:
+    limit:
+    scm_branch:
+    ask_inventory_on_launch: false
+    ask_scm_branch_on_launch: false
+    ask_limit_on_launch: false
+    webhook_service: ''
+    webhook_credential:
+    ask_labels_on_launch: false
+    ask_skip_tags_on_launch: false
+    ask_tags_on_launch: false
+    skip_tags:
+    job_tags:
+    related:
+      schedules: []
+      workflow_nodes:
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+          name: Workflow Approval Demo
+          type: workflow_job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+              name: Workflow Approval Demo
+              type: workflow_job_template
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+          create_approval_template:
+            timeout: 600
+            name: Python Script Approval
+            description: This workflow needs an approval
+        natural_key:
+          workflow_job_template:
+            organization:
+            name: Workflow Approval Demo
+            type: workflow_job_template
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        workflow_job_template:
+          organization:
+          name: Workflow Approval Demo
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: python secrets to localhost
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+            name: Workflow Approval Demo
+            type: workflow_job_template
+          type: workflow_job_template_node
+      labels: []
+      notification_templates_started: []
+      notification_templates_success: []
+      notification_templates_error: []
+      notification_templates_approvals: []
+      survey_spec: {}
+    natural_key:
+      organization:
+      name: Workflow Approval Demo
+      type: workflow_job_template
