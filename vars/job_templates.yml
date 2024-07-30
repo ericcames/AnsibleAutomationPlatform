@@ -125,7 +125,7 @@ controller_templates:
     playbook: playbooks/add_inventory_03.yml
     credentials:
       - AWS Credential
-      - aap.kona.services:8443
+      - aap.kona.services:8443 controller
 
   - name: DDL - Network Create
     job_type: run
