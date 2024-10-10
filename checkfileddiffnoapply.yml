@@ -1,29 +1,29 @@
 ---
 - name: Check file diff
   hosts: all
-  gather_facts: False
-
+  gather_facts: false
 
   tasks:
+
     - name: Grab Repo with source file
+      run_once: true
       ansible.builtin.git:
         repo: "{{ sourcefilerepo }}"
         dest: /tmp/demo
-        accept_hostkey: yes
-        force: yes
-      delegate_to: 127.0.0.1
-      run_once: true
+        accept_hostkey: true
+        force: true
 
     - name: Check for variance in File
+      check_mode: true
+      diff: true
+      register: filechanges
       ansible.builtin.copy:
         src: "/tmp/demo/{{ file2comp }}"
         dest: "/etc/{{ file2comp }}"
-      check_mode: yes
-      diff: yes
-      register : filechanges
+        mode: '0644'
 
-    - name: stat check_mode
-      ansible.builtin.stat:
-        path: "/etc/{{ file2comp }}"
+    - name: Stat check_mode
       when: filechanges.changed == true
       register: statvar
+      ansible.builtin.stat:
+        path: "/etc/{{ file2comp }}"
