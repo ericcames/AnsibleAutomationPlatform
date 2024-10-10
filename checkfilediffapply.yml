@@ -16,12 +16,12 @@
 
     - name: Check for variance in File and make changes if needed
       diff: true
-      register : filechanges
+      register: filechanges
       ansible.builtin.copy:
         src: "/tmp/demo/{{ file2comp }}"
         dest: "/etc/{{ file2comp }}"
 
-    - name: stat check_mode
+    - name: Stat check_mode
       when: filechanges.changed == true
       register: statvar
       ansible.builtin.stat:

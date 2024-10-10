@@ -6,6 +6,7 @@
   tasks:
 
     - name: Grab Repo with source file
+      delegate_to: "{{ inventory_hostname }}"
       run_once: true
       ansible.builtin.git:
         repo: "{{ sourcefilerepo }}"
