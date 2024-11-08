@@ -1,0 +1,19 @@
+---
+- name: Check file diff
+  hosts: rheldemo
+  gather_facts: false
+
+  tasks:
+
+    - name: Check the sshd_config file
+      diff: true
+      ansible.builtin.copy:
+        src: "{{ file2comp }}"
+        dest: "/etc/ssh/{{ file2comp }}"
+        mode: '0600'
+        group: root
+        owner: root
+        seuser: system_u
+        serole: object_r
+        setype: etc_t
+        selevel: s0

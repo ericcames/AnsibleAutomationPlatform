@@ -1,18 +1,17 @@
 ---
 - name: Check file diff
-  hosts: all
+  hosts: rheldemo
   gather_facts: false
 
   tasks:
 
     - name: Grab Repo with source file
-      delegate_to: "{{ inventory_hostname }}"
-      run_once: true
       ansible.builtin.git:
         repo: "{{ sourcefilerepo }}"
         dest: /tmp/demo
         accept_hostkey: true
         force: true
+        version: main
 
     - name: Check for variance in File
       check_mode: true
