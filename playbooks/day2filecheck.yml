@@ -5,17 +5,21 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
 
+  vars_files:
+    - file_dictionary.yml
+
   tasks:
 
-    - name: Check the sshd_config file
+    - name: Check or fix files we care about
+      loop: "{{ files }}"
       diff: true
       ansible.builtin.copy:
-        src: "{{ file2comp }}"
-        dest: "/etc/ssh/{{ file2comp }}"
-        mode: '0600'
-        group: root
-        owner: root
-        seuser: system_u
-        serole: object_r
-        setype: etc_t
-        selevel: s0
+        src: "{{ item['name'] }}"
+        dest: "{{ item['directory'] }}{{ item['name'] }}"
+        mode: "{{ item['mode'] }}"
+        group: "{{ item['group'] }}"
+        owner: "{{ item['owner'] }}"
+        seuser: "{{ item['seuser'] }}"
+        serole: "{{ item['serole'] }}"
+        setype: "{{ item['setype'] }}"
+        selevel: "{{ item['selevel'] }}"
