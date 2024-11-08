@@ -8,9 +8,7 @@
   tasks:
 
     - name: Check the sshd_config file
-      register: filechanges
       diff: true
-      when:
       ansible.builtin.copy:
         src: "{{ file2comp }}"
         dest: "/etc/ssh/{{ file2comp }}"
@@ -21,14 +19,3 @@
         serole: object_r
         setype: etc_t
         selevel: s0
-
-    - name: Print
-      debug:
-        var: filechanges
-
-  handlers:
-
-    - name: Stat check_mode
-      when: filechanges.changed equalto true
-      ansible.builtin.stat:
-        path: "/etc//ssh/{{ file2comp }}"
