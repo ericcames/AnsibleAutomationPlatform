@@ -6,7 +6,7 @@
     ansible_python_interpreter: /usr/bin/python3
 
   vars_files:
-    - file_dictionary.yml
+    - files/file_dictionary.yml
 
   tasks:
 
